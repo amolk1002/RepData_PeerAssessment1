@@ -17,8 +17,8 @@ dim(noNA)
 
 Now we have loaded the data, we will try to find some important insights on this data.
 
-First we will see What is mean total number of steps taken per day?
-                 
+#  What is mean total number of steps taken per day?
+
 
 you can ignore the missing values in the dataset.
 Make a histogram of the total number of steps taken each day
@@ -30,8 +30,7 @@ of Total Number of Steps Taken Each Day", x = "Date", y = "Total numnumber of st
 
 
 ```
-
-Now Calculate and report the mean and median total number of steps taken per day
+#  Now Calculate and report the mean and median total number of steps taken per day
 Mean total number of steps taken per day:
 
 ```{r}
@@ -41,14 +40,14 @@ mean(totalSteps)
 
 ```
 
-Median total number of steps taken per day:
+# Median total number of steps taken per day:
 
 ```{r}
 median(totalSteps)
 
 ```
 
-What is the average daily activity pattern?
+# What is the average daily activity pattern?
 
 Here we will Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and 
 the average number of steps taken, averaged across all days (y-axis)
@@ -64,7 +63,7 @@ labs(title = "Time Series Plot of the 5-minute Interval", x = "5-minute interval
 
 ```
 
-Now next point is Which 5-minute interval, on average across all the days in the dataset, 
+# Now next point is Which 5-minute interval, on average across all the days in the dataset, 
 contains the maximum number of steps?
 
 ```{r}
@@ -73,7 +72,7 @@ avgSteps[avgSteps$meanOfSteps == max(avgSteps$meanOfSteps),]
 
 ```
 
-Important aspect is Imputing missing values
+# Important aspect is Imputing missing values
 
     The total number of rows with NAs
     
@@ -105,7 +104,7 @@ sum(is.na(newData))
 
 ```
 
-Next we will Make a histogram of the total number of steps taken each day and Calculate 
+# Next we will Make a histogram of the total number of steps taken each day and Calculate 
 and report the mean and median total number of steps taken per day.
 
 
@@ -119,7 +118,7 @@ missing data)", x = "Date", y = "Total number of steps")
 
 
 
-  Now we need to see that Do these values differ from the estimates from the first part of 
+ #  Now we need to see that Do these values differ from the estimates from the first part of 
 the assignment? What is the impact of imputing missing data on the estimates of the total 
 daily number of steps?
 
@@ -152,7 +151,7 @@ So, after imputing the missing data, the new mean of total steps taken per day i
 that of the old mean; the new median of total steps taken per day is greater than that of the 
 old median.
 
-Next,Are there differences in activity patterns between weekdays and weekends?
+# Next,Are there differences in activity patterns between weekdays and weekends?
 
    Lets Create a new factor variable in the dataset with two levels -- "weekday" and 
 "weekend" indicating whether a given date is a weekday or weekend day.
@@ -170,7 +169,7 @@ table(newData$weekdays)
 ```
 
 
-Now Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute 
+# Now Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute 
 interval (x-axis) and the average number of steps taken, averaged across all weekday days or 
 weekend days (y-axis).
 
